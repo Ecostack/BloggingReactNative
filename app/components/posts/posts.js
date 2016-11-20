@@ -8,6 +8,12 @@ import {
     TouchableHighlight
 } from 'react-native';
 
+
+// Styles
+import variables from '../../styles/variables';
+import postStyle from '../../styles/posts';
+
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,

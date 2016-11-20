@@ -12,34 +12,10 @@ import {Actions} from 'react-native-router-flux';
 import variables from '../../styles/variables';
 import postStyle from '../../styles/posts';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        // justifyContent: "center",
-        // alignItems: "center",
-        backgroundColor: "#F5FCFF",
-    },
-});
-
-
-const stylesRow = StyleSheet.create({
-        container: {
-            flex: 1,
-            padding: 12,
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            borderBottomColor: 'black',
-            borderBottomWidth: 1
-        },
-        title: { marginLeft: 12, fontSize: 50},
-        content: {marginTop: 20, marginLeft: 12, fontSize: 16},
-    })
-    ;
-
 const Row = (props) => (
-    <View style={stylesRow.container}>
-        <Text style={stylesRow.title}>{props.title}</Text>
-        <Text style={stylesRow.content}>{props.content}</Text>
+    <View style={postStyle.container}>
+        <Text style={postStyle.title}>{props.title}</Text>
+        <Text style={postStyle.content}>{props.content}</Text>
     </View>
 );
 

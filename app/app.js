@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
-  View,
-  Text,
+    ActivityIndicator,
+    StyleSheet,
+    View,
+    Text,
 } from 'react-native';
 
 import {Actions, Scene, Router} from 'react-native-router-flux';
 
+// Styles
+import variables from './styles/variables';
+import mainStyle from './styles/main';
+
 // Components
+import Loading from './components/loading';
 import Users from './components/users/users';
 import Posts from './components/posts/posts';
 
 const scenes =  Actions.create(
     <Scene key="root">
-        <Scene key="users" component={Users} title="Users" initial/>
-        <Scene key="posts" component={Posts} title="Posts"/>
+        <Scene key="loading" component={Loading}/>
+        <Scene key="users" component={Users} title="Users"/>
+        <Scene key="posts" component={Posts} title="Posts" initial/>
     </Scene>
 );
 
@@ -23,33 +30,5 @@ class App extends Component {
         return <Router scenes={scenes}/>
     }
 }
-
-/*var Root = React.createClass({
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.header}></View>
-        <View style={styles.quarterHeight}></View>
-        <View style={[styles.quarterHeight, {backgroundColor: 'red'}]}></View>
-      </View>
-    );
-  }
-});*/
-
-/*const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#000000',
-        flex: 1,
-        flexDirection: 'column'
-    },
-    header: {
-        flex: .5,
-        backgroundColor: '#FF3366'
-    },
-    quarterHeight: {
-        flex: .25,
-        backgroundColor: 'yellow'
-    }
-});*/
 
 export default App;

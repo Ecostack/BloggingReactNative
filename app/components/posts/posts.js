@@ -7,14 +7,9 @@ import {
 
 import {Actions} from 'react-native-router-flux';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F5FCFF",
-    },
-});
+// Styles
+import variables from '../../styles/variables';
+import postStyle from '../../styles/posts';
 
 class Posts extends Component  {
     render () {

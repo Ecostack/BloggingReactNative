@@ -7,20 +7,15 @@ import {
 
 import {Actions} from 'react-native-router-flux';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "red",
-    },
-});
+// Styles
+import variables from '../../styles/variables';
+import userStyle from '../../styles/users';
 
 class Users extends Component {
     render () {
         return (
             <View>
-                <Text onPress=>Users</Text>
+                <Text>Users</Text>
             </View>
         );
     }

@@ -22,7 +22,7 @@ const scenes = Actions.create(
 class App extends Component {
     render() {
         return (
-            <ScrollableTabView scrollWithoutAnimation={false}>
+            <ScrollableTabView scrollWithoutAnimation={false} tabBarPosition={"bottom"}>
                 <Users tabLabel='Users'/>
                 <Posts tabLabel='Posts'/>
             </ScrollableTabView>

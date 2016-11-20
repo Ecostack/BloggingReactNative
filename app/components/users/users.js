@@ -12,18 +12,18 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#F5FCFF",
+        backgroundColor: "red",
     },
 });
 
-class Posts extends Component  {
+class Users extends Component {
     render () {
         return (
             <View>
-                <Text>Posts</Text>
+                <Text onPress=>Users</Text>
             </View>
         );
     }
 }
 
-export default Posts;
+export default Users;

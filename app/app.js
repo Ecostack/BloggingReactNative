@@ -5,7 +5,26 @@ import {
   Text,
 } from 'react-native';
 
-var Root = React.createClass({
+import {Actions, Scene, Router} from 'react-native-router-flux';
+
+// Components
+import Users from './components/users/users';
+import Posts from './components/posts/posts';
+
+const scenes =  Actions.create(
+    <Scene key="root">
+        <Scene key="users" component={Users} title="Users" initial/>
+        <Scene key="posts" component={Posts} title="Posts"/>
+    </Scene>
+);
+
+class App extends Component {
+    render() {
+        return <Router scenes={scenes}/>
+    }
+}
+
+/*var Root = React.createClass({
   render() {
     return (
       <View style={styles.container}>
@@ -15,9 +34,9 @@ var Root = React.createClass({
       </View>
     );
   }
-});
+});*/
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
     container: {
         backgroundColor: '#000000',
         flex: 1,
@@ -31,6 +50,6 @@ const styles = StyleSheet.create({
         flex: .25,
         backgroundColor: 'yellow'
     }
-});
+});*/
 
-export default Root;
+export default App;

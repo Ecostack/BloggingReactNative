@@ -20,7 +20,7 @@ class Users extends Component {
     render () {
         return (
             <View>
-                <Text onPress=>Users</Text>
+                <Text>Users</Text>
             </View>
         );
     }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     ActivityIndicator,
     StyleSheet,
@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 
 import {Actions, Scene, Router} from 'react-native-router-flux';
+const ScrollableTabView = require('react-native-scrollable-tab-view');
 
 // Styles
 import variables from './styles/variables';
@@ -17,7 +18,7 @@ import Loading from './components/loading';
 import Users from './components/users/users';
 import Posts from './components/posts/posts';
 
-const scenes =  Actions.create(
+const scenes = Actions.create(
     <Scene key="root">
         <Scene key="loading" component={Loading}/>
         <Scene key="users" component={Users} title="Users"/>
@@ -27,7 +28,12 @@ const scenes =  Actions.create(
 
 class App extends Component {
     render() {
-        return <Router scenes={scenes}/>
+        return (
+            <ScrollableTabView scrollWithoutAnimation={false} tabBarPosition={"bottom"}>
+                <Users tabLabel='Users'/>
+                <Posts tabLabel='Posts'/>
+            </ScrollableTabView>
+        )
     }
 }
 
